@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\sweepingRobot\sweepingRobotSimulation\sweepingRobotSimulation\bin\Debug\sweepingRobotSimulation.exe.config
+C:\Users\Administrator\Desktop\sweepingRobot\sweepingRobotSimulation\sweepingRobotSimulation\bin\Debug\sweepingRobotSimulation.exe
+C:\Users\Administrator\Desktop\sweepingRobot\sweepingRobotSimulation\sweepingRobotSimulation\bin\Debug\sweepingRobotSimulation.pdb
+C:\Users\Administrator\Desktop\sweepingRobot\sweepingRobotSimulation\sweepingRobotSimulation\obj\Debug\sweepingRobotSimulation.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\sweepingRobot\sweepingRobotSimulation\sweepingRobotSimulation\obj\Debug\sweepingRobotSimulation.Form1.resources
+C:\Users\Administrator\Desktop\sweepingRobot\sweepingRobotSimulation\sweepingRobotSimulation\obj\Debug\sweepingRobotSimulation.Properties.Resources.resources
+C:\Users\Administrator\Desktop\sweepingRobot\sweepingRobotSimulation\sweepingRobotSimulation\obj\Debug\sweepingRobotSimulation.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\sweepingRobot\sweepingRobotSimulation\sweepingRobotSimulation\obj\Debug\sweepingRobotSimulation.exe
+C:\Users\Administrator\Desktop\sweepingRobot\sweepingRobotSimulation\sweepingRobotSimulation\obj\Debug\sweepingRobotSimulation.pdb
