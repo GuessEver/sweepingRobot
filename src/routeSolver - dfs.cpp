@@ -1,4 +1,4 @@
-#pragma comment(linker, "/STACK:1024000000,1024000000")
+#pragma comment(linker, "/STACK:1024000000,1024000000") 
 #include <cstdio>
 #include <algorithm>
 int W, H, A, Sx, Sy;
@@ -29,8 +29,8 @@ void clean(int x, int y) {
 }
 
 void dfs(int x, int y) {
-	clean(x, y);
 	//printf("(%d, %d)\n", x, y);
+	clean(x, y);
 	for(int k = 0; k < 4; k++) {
 		int nx = x + dx[k], ny = y + dy[k];
 		if(!can(nx, ny)) continue;

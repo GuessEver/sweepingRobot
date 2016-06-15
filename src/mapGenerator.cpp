@@ -30,6 +30,7 @@ int main(int argc, char* argv[]) {
 		fill(x, y, B, -1);
 	}
 	int Sx = rand()%(W-A), Sy = rand()%(H-A);
+	Sx = 0; Sy = 0; // fix point
 	fill(Sx, Sy, A, 0);
 	for(int j = 0; j < H; j++) {
 		for(int i = 0; i < W; i++) {

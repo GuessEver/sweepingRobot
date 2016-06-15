@@ -1,13 +1,15 @@
-#pragma comment(linker, "/STACK:1024000000,1024000000")
+#pragma comment(linker, "/STACK:1024000000,1024000000") 
 #include <cstdio>
 #include <algorithm>
+#include <string>
+using std::string;
 int W, H, A, Sx, Sy;
 int cap[1000][1000];
 bool done[1000][1000];
 const int dx[] = {0, 1, 0, -1};
 const int dy[] = {-1, 0, 1, 0};
 const char* dir = {"NESW"};
-const char* antidir = {"SWNE"};
+const string dirs[] = {"N", "E", "S", "W", "NE", "ES", "SW", "WN", "NNE", "NEE", "EES", "ESS", "SSW", "SWW", "WWN", "WNN"};
 
 bool can(int x, int y) {
 	if(x < 0 || x >= W || y < 0 || y >= H) return 0;
@@ -27,22 +29,32 @@ void clean(int x, int y) {
 		for(int j = y; j < std::min(y + A, H); j++)
 			++cap[i][j];
 }
+int getDir(char ch) {
+	for(int i = 0; i < 4; i++)
+		if(ch == dir[i]) return i;
+}
 
-void dfs(int x, int y) {
-	clean(x, y);
-	//printf("(%d, %d)\n", x, y);
-	for(int k = 0; k < 4; k++) {
-		int nx = x + dx[k], ny = y + dy[k];
-		if(!can(nx, ny)) continue;
-		putchar(dir[k]);
-		dfs(nx, ny);
-		putchar(antidir[k]);
-		clean(x, y);
-	}
+void changeDir(string &dd) {
+	int k = rand()%16;
+	dd = dirs[k];
 }
 
 void solve() { // North-East-South-West
-	dfs(Sx, Sy);
+	int x = Sx, y = Sy;
+	string directions = "N";
+	for(int _times = 0; _times < 10000000; _times++) {
+		for(int i = 0; i < directions.length(); i++) {
+			int k = getDir(directions[i]);
+			int nx = x + dx[k], ny = y + dy[k];
+			if(!can(nx, ny)) {
+				changeDir(directions);
+				break;
+			}
+			putchar(dir[k]);
+			//clean(x, y);
+			x = nx; y = ny;
+		}
+	}
 }
 void printMap() {
 	puts("");
